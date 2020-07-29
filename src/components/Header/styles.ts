@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 interface ContainerProps {
   size?: 'small' | 'large';
@@ -32,5 +33,15 @@ export const Container = styled.div<ContainerProps>`
         }
       }
     }
+  }
+`;
+
+export const Item = styled(Link)`
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+
+  &:hover,
+  &:active {
+    border-bottom-color: #ff872c;
   }
 `;
